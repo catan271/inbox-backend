@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-import User from './UserModel.js'
+import User from './UserModel'
 
 const chatSchema = new mongoose.Schema({
     members: [{

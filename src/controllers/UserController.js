@@ -1,4 +1,4 @@
-import User from "../models/UserModel.js"
+import User from "../models/UserModel"
 
 // controllers for user routers
 export const register = async (req, res, next) => {

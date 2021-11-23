@@ -1,7 +1,7 @@
 import express from 'express'
 
-import { getAllChats, getOneChat, send } from '../controllers/ChatController.js'
-import auth from '../services/auth.js'
+import { getAllChats, getOneChat, send } from '../controllers/ChatController'
+import auth from '../services/auth'
 
 const chatRouter = express.Router()
 
