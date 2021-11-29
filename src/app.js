@@ -2,9 +2,9 @@ import express, { json } from 'express'
 import cors from 'cors'
 import { config } from 'dotenv'
 
-import { connect } from './db/mongoose'
-import userRouter from './routers/UserRouter'
-import chatRouter from './routers/ChatRouter'
+import { connect } from './db/mongoose.js'
+import userRouter from './routers/UserRouter.js'
+import chatRouter from './routers/ChatRouter.js'
 
 // initial config
 config()

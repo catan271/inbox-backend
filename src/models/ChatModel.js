@@ -1,7 +1,5 @@
 import mongoose from 'mongoose'
 
-import User from './UserModel'
-
 const chatSchema = new mongoose.Schema({
     members: [{
         type: mongoose.Schema.Types.ObjectId,
@@ -36,7 +34,6 @@ chatSchema.virtual('messages', {
 
 chatSchema.methods.toJSON = function() {
     return {
-        _id: this._id,
         last: this.last,
         seen: this.seen
     }

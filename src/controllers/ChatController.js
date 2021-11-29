@@ -1,6 +1,6 @@
-import Chat from "../models/ChatModel"
-import Message from '../models/MessageModel'
-import User from "../models/UserModel"
+import Chat from "../models/ChatModel.js"
+import Message from '../models/MessageModel.js'
+import User from "../models/UserModel.js"
 
 const getChat = async (from, to) => {
     if (from == to) throw new Error('Cannot send message to yourself')

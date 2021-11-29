@@ -1,7 +1,7 @@
 import express from 'express'
 
-import { findUser, getProfile, login, logout, logoutAll, register } from '../controllers/UserController'
-import auth from '../services/auth'
+import { findUser, getProfile, login, logout, logoutAll, register } from '../controllers/UserController.js'
+import auth from '../services/auth.js'
 
 const userRouter = new express.Router()
 
