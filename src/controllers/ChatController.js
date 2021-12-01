@@ -2,7 +2,7 @@ import Chat from "../models/ChatModel.js"
 import Message from '../models/MessageModel.js'
 import User from "../models/UserModel.js"
 
-const getChat = async (from, to) => {
+export const getChat = async (from, to) => {
     if (from == to) throw new Error('Cannot send message to yourself')
     if (!(await User.findById(from)) || !(await User.findById(to))) throw new Error('User not found')
     let chat = await Chat.findOne({members: {$all: [from, to]}})
