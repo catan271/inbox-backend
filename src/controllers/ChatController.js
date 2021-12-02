@@ -52,7 +52,9 @@ export const getAllChats = async (req, res, next) => {
             options: {
                 sort: {
                     'last.time': -1
-                }
+                },
+                limit: 12,
+                skip: Number.parseInt(req.query.skip || '0')
             }
         })
 
