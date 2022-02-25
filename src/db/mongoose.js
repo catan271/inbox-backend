@@ -10,6 +10,7 @@ export const connect = async () => {
             console.log('database connect')
             return mongoose
         })
+        .catch(console.log)
 
         await conn
     }

@@ -5,8 +5,8 @@ import auth from '../services/auth.js'
 
 const chatRouter = express.Router()
 
-chatRouter.post('/chats/send', auth, send)
-chatRouter.get('/chats/all', auth, getAllChats)
-chatRouter.get('/chats/:to', auth, getOneChat)
+chatRouter.post('/chat/send', auth, send)
+chatRouter.get('/chat/all', auth, getAllChats)
+chatRouter.get('/chat/:to', auth, getOneChat)
 
 export default chatRouter

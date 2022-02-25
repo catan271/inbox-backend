@@ -78,6 +78,7 @@ userSchema.methods.toJSON = function() {
         givenName: this.givenName,
         familyName: this.familyName,
         username: this.username,
+        age: this.age,
         gender: this.gender,
         color: this.color
     }

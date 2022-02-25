@@ -75,3 +75,24 @@ export const findUser = async (req, res, next) => {
         next(e)
     }
 }
+
+export const updateUser = async (req, res, next) => {
+    try {
+        const { user, body } = req
+        const allowedUpdates = ['givenName', 'familyName', 'age', 'gender', 'color']
+        const updates = Object.keys(body)
+        const valid = updates.every((update) => allowedUpdates.includes(update))
+
+        if (!valid) throw new Error('Invalid update')
+
+        for (const field of updates) {
+            user[field] = body[field]
+        }
+        user.name = user.familyName + ' ' + user.givenName
+        await user.save()
+
+        res.send(user)
+    } catch (e) {
+        next(e)
+    }
+}
