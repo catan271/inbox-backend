@@ -17,9 +17,7 @@ connect()
 
 
 // routers
-app.get('/', (req, res) => {
-    res.send('API home')
-})
+app.use('/', express.static('public'))
 
 app.use(userRouter)
 app.use(chatRouter)
